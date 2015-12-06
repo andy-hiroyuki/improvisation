@@ -1,0 +1,31 @@
+style
+  :css
+    body {
+      /* http://www.fotopedia.com/items/jmhullot-KKGjJBSdnOw */
+      background-image: url(background-photo.jpg);
+    }
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img(src="jacket.png")
+            td.pagehead-r
+              .jacketdesc
+                h1 Wild Neverland
+                p
+                | リバーヒルソフトの「ワールドネバーランド」の世界観をイメージした楽曲です。ワーネバは私が大好きなゲームで当時は夜通しで夢中になってプレイしてました。
+          tr
+            td
+              //- .downloadbtn ダウンロード
+        .pagecontent
+          include ../soundplayer.jade
+
+script
+  :coffee-script
+    window.album_url = "http://oto-no-sono.com/musics/wild-neverland/";
+    window.tracks_url = "./tracks.json"; # ravoid for Access-Control-Allow-Origin

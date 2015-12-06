@@ -1,0 +1,31 @@
+style
+  :css
+    body {
+      /* http://www.fotopedia.com/items/flickr-2821388509 */
+      background-image: url(background-photo.jpg);
+    }
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img(src="jacket.png")
+            td.pagehead-r
+              .jacketdesc
+                h1 Decision 〜Another Fields〜
+                p
+                | アルバム「Decision」の世界観をピアノで即興的に弾きました。調性を下げて重厚感を演出しました。ヒーリングとして聴いていただけると嬉しいです。
+          tr
+            td
+              //- .downloadbtn ダウンロード
+        .pagecontent
+          include ../soundplayer.jade
+
+script
+  :coffee-script
+    window.album_url = "http://oto-no-sono.com/musics/another-fields/";
+    window.tracks_url = "./tracks.json"; # ravoid for Access-Control-Allow-Origin

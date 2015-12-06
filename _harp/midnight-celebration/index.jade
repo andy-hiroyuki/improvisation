@@ -1,0 +1,31 @@
+style
+  :css
+    body {
+      /* http://www.fotopedia.com/items/4tg1q9r7sq5v1-CAXVgMHgAhM */
+      background-image: url(background-photo.jpg);
+    }
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img(src="jacket.png")
+            td.pagehead-r
+              .jacketdesc
+                h1 Midnight Celebration
+                p
+                | 真夜中に響く神聖な音楽をイメージしました。神秘的で聴いていて祝福されるような...。
+          tr
+            td
+              //- .downloadbtn ダウンロード
+        .pagecontent
+          include ../soundplayer.jade
+
+script
+  :coffee-script
+    window.album_url = "http://oto-no-sono.com/musics/midnight-celebration/";
+    window.tracks_url = "./tracks.json"; # ravoid for Access-Control-Allow-Origin

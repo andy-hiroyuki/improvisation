@@ -1,0 +1,31 @@
+style
+  :css
+    body {
+      /* https://www.flickr.com/photos/switchermark/8826243712 */
+      background-image: url(background-photo.jpg);
+    }
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img(src="jacket.png")
+            td.pagehead-r
+              .jacketdesc
+                h1 Blue Fantasy
+                p
+                | ファイナルファンタジー4の楽曲を即興で演奏した実験的なアルバムです。メロディのリズムや音程をイメージして相対音感を頼りに弾いてます。オリジナル曲も織り交ぜてます。
+          tr
+            td
+              .downloadbtn ダウンロード
+        .pagecontent
+          include ../soundplayer.jade
+
+script
+  :coffee-script
+    window.album_url = "http://oto-no-sono.com/musics/blue-fantasy/";
+    window.tracks_url = "./tracks.json"; # ravoid for Access-Control-Allow-Origin

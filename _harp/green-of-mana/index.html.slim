@@ -1,0 +1,38 @@
+---
+layout: album
+title: Green of Mana
+---
+
+link href="../app.css" rel="stylesheet"
+css:
+  body {
+    /* https://www.flickr.com/photos/h-k-d/3066799064 */
+    background-image: url(background-photo.jpg);
+  }
+
+
+article
+  #tile
+    .content
+      .page
+        table.pagehead
+          tr
+            td.pagehead-l
+              .jacket
+                img src="jacket.png"
+            td.pagehead-r
+              .jacketdesc
+                h1 Green of Mana
+                p
+                | 私が尊敬している作曲家の一人、伊藤賢治氏の聖剣伝説の曲をピアノで弾きました。原曲に近いアレンジで弾いたものもあれば、即興的に弾いた曲もあります。
+          tr
+            td
+              / .downloadbtn ダウンロード
+        .pagecontent
+          == partial 'layouts/soundplayer'
+
+javascript:
+  var album_url = "http://oto-no-sono.com/musics/green-of-mana/";
+  var tracks_url = "./tracks.json";
+
+script src="../sounddistributer.js"
