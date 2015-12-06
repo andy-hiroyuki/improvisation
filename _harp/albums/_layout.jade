@@ -14,11 +14,11 @@ html(lang="ja")
     != yield
 
 
-script(src="../../SM2/soundmanager2-jsmin.js")
-script(src="../../sounddistributer.js")
-script
-  :coffee-script
-    soundManager.setup({
-      url: 'SM2/',
-      flashVersion: 9
-    });
+    script(src="../../assets/SM2/soundmanager2-jsmin.js")
+    script(src="../../assets/sounddistributer.js")
+    script
+      :coffee-script
+        soundManager.setup({
+          url: 'SM2/',
+          flashVersion: 9
+        });
