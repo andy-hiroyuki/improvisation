@@ -9,10 +9,12 @@ html(lang="ja")
     link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet")
     link(rel="stylesheet" href="../album.css")
   body
-    include ./_menu.jade
+    #wrap
+      aside#sidenav
+        include ./_menu.jade
 
-    != yield
-
+      section#main
+        != yield
 
     script(src="../../assets/SM2/soundmanager2-jsmin.js")
     script(src="../../assets/sounddistributer.js")

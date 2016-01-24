@@ -22,8 +22,13 @@ article
           tr
             td
               //- .downloadbtn ダウンロード
-        .pagecontent
-          include ../soundplayer.jade
+
+        div.flexbox
+          .pagecontent(style="width:50%;")
+            include ../soundplayer.jade
+
+          aside#trackside
+            include ../_trackside.jade
 
 script
   :coffee-script
