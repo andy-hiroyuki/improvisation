@@ -98,6 +98,45 @@ svg {
   }
 }
 
+.trackList {
+  width: 100%;
+  margin: 15px 0;
+  border-spacing: 0;
+  font-size: 16px;
+
+  tr th {
+    text-align: left;
+    font-size: 80%;
+    color: #888;
+  }
+  tr td {
+    border-bottom: 1px solid #444;
+  }
+  tr td:first-child {
+    color: #aaa;
+  }
+  .active td:first-child:before {
+    content: "\f04b";
+    font: normal normal normal 14px/1 FontAwesome;
+    position: absolute;
+    right: 40px;
+    top: 7px;
+    color: #fff;
+  }
+  tr th,
+  tr td {
+    padding: 2px 5px;
+  }
+  tr:hover td {
+    text-decoration: underline;
+    background-color: #222;
+    cursor: pointer;
+  }
+}
+.right {
+  text-align: right !important;
+}
+
 .trackdetail {
   .title {
     font-size: 18px;

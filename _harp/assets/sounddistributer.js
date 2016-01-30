@@ -58,12 +58,12 @@ $(function(){
 				});
 
 			});
-				
+
 			$('.title').text(sc_tracks[0].title);
 
-			for (var i=0; i<sc_tracks.length; i++) {
-				addMusic(sc_tracks[i]);
-			}
+			// for (var i=0; i<sc_tracks.length; i++) {
+			// 	addMusic(sc_tracks[i]);
+			// }
 
 		});
 
@@ -141,7 +141,7 @@ $(function(){
 		// Stop all sounds
 		soundManager.stopAll();
 
-		// Click the next list item after the current active one. 
+		// Click the next list item after the current active one.
 		// If it does not exist *(there is no next track)*, click the first list item.
 		if ( $('tr.track.active').next().trigger(EV_TOUCHEND).length == 0 ) {
 			$('#musiclist tr.track:first-child').trigger(EV_TOUCHEND);
@@ -155,7 +155,7 @@ $(function(){
 		// Stop all sounds
 		soundManager.stopAll();
 
-		// Click the previous list item after the current active one. 
+		// Click the previous list item after the current active one.
 		// If it does not exist *(there is no previous track)*, click the last list item.
 		if ( $('tr.track.active').prev().trigger(EV_TOUCHEND).length == 0 ) {
 			$('#musiclist tr.track:last-child').trigger(EV_TOUCHEND);
@@ -164,24 +164,3 @@ $(function(){
 	}
 
 });
-
-
-function addMusic(sc_track) {
-	var track_html = "";
-	track_html += "<tr class='track' data-track_idx='" + sc_track.track_idx + "'>";
-//	track_html += "<td>" + "<a type='audio/mp3' class='sm2_button' href='" + sc_track.url + "'></a>" + "</td>";
-	track_html += "<td class='right'>" + sc_track.track_no + ".</td>";
-	track_html += "<td>" + sc_track.title + "</td>";
-//	track_html += "<td>" + sc_track.album + "</td>";
-	track_html += "<td>" + convertDuration(sc_track.duration*1000) + "</td>";
-	track_html += "</tr>";
-	$('#musiclist tbody').append(track_html);
-}
-
-function convertDuration(ms) {
-	var h = String(Math.floor(ms / 3600000) + 100).substring(1);
-	var m = String(Math.floor((ms - h * 3600000)/60000)+ 100).substring(1);
-	var s = String(Math.round((ms - h * 3600000 - m * 60000)/1000)+ 100).substring(1);
-	var hm = Number(h)*60 + Number(m);
-	return hm+':'+s;
-}
